@@ -57,3 +57,23 @@ float divide(float a, float b)
 
     return a / b;
 }
+
+/**
+ * power - raise a number to a power
+ *
+ * @a: number to raise
+ * @b: power to raise
+ *
+ * Return: @a raised to the power @b
+ */
+int power(int a, int b)
+{
+    int result = 1;
+
+    for (int i = 0; i < b; i++)
+    {
+        result *= a;
+    }
+
+    return result;
+}
