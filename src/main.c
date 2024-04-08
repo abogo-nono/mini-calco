@@ -2,8 +2,7 @@
 
 int main(void)
 {
-    int choice, num1_int, num2_int, result_int;
-    float num1_float, num2_float, result_float;
+    int num1, num2, result, choice;
 
     do
     {
@@ -12,45 +11,40 @@ int main(void)
         switch (choice)
         {
         case 1:
-            printf("Enter two numbers: ");
-            scanf("%f %f", &num1_float, &num2_float);
-            result_float = add(num1_float, num2_float);
-            printf("The sum of %f and %f is %f\n", num1_float, num2_float, result_float);
+            get_number(&num1, &num2);
+            result = add(num1, num2);
+            printf("\n%d + %d = %d\n", num1, num2, result);
             break;
 
         case 2:
-            printf("Enter two numbers: ");
-            scanf("%f %f", &num1_float, &num2_float);
-            result_float = subtract(num1_float, num2_float);
-            printf("The difference of %f and %f is %f\n", num1_float, num2_float, result_float);
+            get_number(&num1, &num2);
+            result = subtract(num1, num2);
+            printf("\n%d - %d = %d\n", num1, num2, result);
             break;
 
         case 3:
-            printf("Enter two numbers: ");
-            scanf("%f %f", &num1_float, &num2_float);
-            result_float = multiply(num1_float, num2_float);
-            printf("the product of %f and %f is %f\n", num1_float, num2_float, result_float);
+            get_number(&num1, &num2);
+            result = multiply(num1, num2);
+            printf("\n%d * %d = %d\n", num1, num2, result);
             break;
 
         case 4:
-            printf("Enter two numbers: ");
-            scanf("%f %f", &num1_float, &num2_float);
-            result_float = divide(num1_float, num2_float);
-            printf("the quotient of %f anf %f is %f\n", num1_float, num2_float, result_float);
+            get_number(&num1, &num2);
+            result = divide(num1, num2);
+            printf("\n%d / %d = %d\n", num1, num2, result);
             break;
 
         case 5:
-            printf("Enter two numbers: ");
-            scanf("%d %d", &num1_int, &num2_int);
-            result_int = power(num1_int, num2_int);
-            printf("the power of %d and %d is %d\n", num1_int, num2_int, result_int);
+            get_number(&num1, &num2);
+            result = power(num1, num2);
+            printf("\n%d ^ %d = %d\n", num1, num2, result);
             break;
 
         case 6:
             printf("Enter a number: ");
-            scanf("%d", &num1_int);
-            result_int = _sqrt(num1_int);
-            printf("the square root of %d is %d\n", num1_int, result_int);
+            scanf("%d", &num1);
+            result = _sqrt(num1);
+            printf("the square root of %d is %d\n", num1, result);
             break;
 
         case 0:

@@ -12,7 +12,7 @@
  *
  * Return: sum of @a and @b
  */
-float add(float a, float b);
+int add(int a, int b);
 
 /**
  * sub - subtract two numbers
@@ -22,7 +22,7 @@ float add(float a, float b);
  *
  * Return: difference of @a and @b
  */
-float subtract(float a, float b);
+int subtract(int a, int b);
 
 /**
  * multiply - multiply two numbers
@@ -32,7 +32,7 @@ float subtract(float a, float b);
  *
  * Return: product of @a and @b
  */
-float multiply(float a, float b);
+int multiply(int a, int b);
 
 /**
  * divide - divide two numbers
@@ -42,7 +42,7 @@ float multiply(float a, float b);
  *
  * Return: quotient of @a and @b
  */
-float divide(float a, float b);
+int divide(int a, int b);
 
 /**
  * power - raise a number to a power
@@ -67,9 +67,19 @@ int _sqrt(int a);
  * menu - print the menu
  *
  * @choice: user's choice
- * 
+ *
  * Return: the choosen option
  */
 void menu(int *choice);
+
+/**
+ * get_number - get two numbers
+ *
+ * @a: first number
+ * @b: second number
+ *
+ * Return: two numbers
+ */
+void get_number(int *a, int *b);
 
 #endif

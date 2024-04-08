@@ -8,7 +8,7 @@
  *
  * Return: sum of @a and @b
  */
-float add(float a, float b)
+int add(int a, int b)
 {
     return a + b;
 }
@@ -21,7 +21,7 @@ float add(float a, float b)
  *
  * Return: difference of @a and @b
  */
-float subtract(float a, float b)
+int subtract(int a, int b)
 {
     return a - b;
 }
@@ -34,7 +34,7 @@ float subtract(float a, float b)
  *
  * Return: product of @a and @b
  */
-float multiply(float a, float b)
+int multiply(int a, int b)
 {
     return a * b;
 }
@@ -47,7 +47,7 @@ float multiply(float a, float b)
  *
  * Return: quotient of @a and @b
  */
-float divide(float a, float b)
+int divide(int a, int b)
 {
     if (b == 0)
     {
@@ -103,20 +103,31 @@ void menu(int *choice)
 {
     int option;
 
-    printf("= Menu =\n");
-    printf("  1. Add\n");
-    printf("  2. Subtract\n");
-    printf("  3. Multiply\n");
-    printf("  4. Divide\n");
+    printf("Welcome to MiniCalco!\n\n");
+    printf("Choose an operation:\n");
+    printf("  1. Addition\n");
+    printf("  2. Subtraction\n");
+    printf("  3. Division\n");
+    printf("  4. Multiplication\n");
     printf("  5. Power\n");
-    printf("  6. Sqrt\n");
+    printf("  6. Square\n");
     printf("  0. Exit\n");
 
     do
     {
-        printf("What operation do you want to perform?\n");
+        printf("\nEnter your choice? ");
         scanf("%d", &option);
     } while (option > 6 || option < 0);
 
     *choice = option;
+}
+
+
+void get_number(int *a, int *b)
+{
+    printf("Enter the first number: ");
+    scanf("%d", a);
+
+    printf("Enter the second number: ");
+    scanf("%d", b);
 }
