@@ -77,3 +77,17 @@ int power(int a, int b)
 
     return result;
 }
+
+/**
+ * _sqrt - calculate the square root of a number
+ *
+ * @a: number to calculate the square root of
+ *
+ * Return: square root of @a
+ */
+int _sqrt(int a)
+{
+    if (a >= 0)
+        return a;
+    return (a * -1);
+}
