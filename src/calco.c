@@ -91,3 +91,32 @@ int _sqrt(int a)
         return a;
     return (a * -1);
 }
+
+/**
+ * menu - print the menu
+ *
+ * @choice: user's choice
+ *
+ * Return: the choosen option
+ */
+void menu(int *choice)
+{
+    int option;
+
+    printf("= Menu =\n");
+    printf("  1. Add\n");
+    printf("  2. Subtract\n");
+    printf("  3. Multiply\n");
+    printf("  4. Divide\n");
+    printf("  5. Power\n");
+    printf("  6. Sqrt\n");
+    printf("  0. Exit\n");
+
+    do
+    {
+        printf("What operation do you want to perform?\n");
+        scanf("%d", &option);
+    } while (option > 6 || option < 0);
+
+    *choice = option;
+}
